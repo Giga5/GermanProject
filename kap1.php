@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<!--
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/Scripting/EmptyPHPWebPage.php to edit this template
+-->
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Der Mensch erscheint im Tal</title>
+        <style>
+            html {
+                height: 100%;
+            }
+            body {
+                background-color: black;
+                height: 100%;
+            }
+            .bigtext {
+                font-size: 5vh;
+                color: whitesmoke;
+                font-family: Monaco, Arial;
+            }
+            .btype {
+                font-size:6vh;
+                color: azure;
+                font-family: "Courier New", Georgia, Arial;
+            }
+            .stype {
+                font-size: 3vh;
+                color: azure;
+                font-family: "Courier New", Georgia, Arial;
+                text-align: right;
+            }
+            .fader {
+                margin: 20vw;
+            }
+            .mainseq {
+                display:none;
+                background: url('nasserfenster.gif') no-repeat fixed;
+                background-size: cover;
+                height: 100%;
+            }
+            .secondseq {
+                display:none;
+                background: url('vollermond.jpg') no-repeat fixed;
+                background-size: cover;
+                height: 200%;
+            }
+            .seqborder {
+                margin: 10% 10% 10% 10%;
+            }
+            .seqtext {
+                display:none;
+                color: azure;
+                font-family: bradley hand, Georgia;
+                font-size: 3vh;
+            }
+            .flashtext{
+                display:none;
+                color: azure;
+                font-family: bradley hand, Georgia;
+                font-size: 5vh;
+            }
+            .beforemain {
+                margin: 10vh 10vw;
+            }
+            .info {
+                font-family: Georgia;
+                color: darksalmon;
+                opacity: 50;
+            }
+        </style>
+         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js">
+        </script>
+        <script src="t.min.js"></script>
+        <script src="jquery.wiggle.js"></script>
+	<script src="jquery.wiggle.min.js"></script>
+        <script>
+        var int = 0;
+        $(document).ready(function(){
+           $(".btype").t('"While our collective powers do have the frightening potential of becoming fatal for life on earth, they are still modest in relation to the universe"', {speed:75, speed_vary:false, delay:true, caret: false, blink: false, fin:function(){ 
+                   $(".stype").t('- Franz Mauelshagen', {speed:90, speed_vary:false, delay:true, caret: false, blink: false, 
+                       fin:function() {
+                           $(".fader").delay(1000).fadeOut("slow", function() {
+                               $("#m1").delay(1000).fadeIn("slow", function() {
+                                   $("#m2").delay(1000).fadeIn("slow", function() {
+                                       $("#m3").delay(1000).fadeIn("slow", function() {
+                                           $(".beforemain").delay(1000).fadeOut("slow", function() {
+                                               $(".mainseq").delay(2000).fadeIn(2000);
+                                               $("i1").delay(5000).fadeIn("fast");
+                                                });
+                                            });
+                                       });
+                                   });
+                               });
+                           }
+                          
+                    });
+               }});
+           
+       $(".mainseq").click(function() {
+           if(int === 0) {
+           $("#i1").fadeOut("fast", function() {
+                    $("#m4").delay(1000).fadeIn("slow");});
+                int++;
+            } else if(int === 1) {
+                $("#m5").delay(1000).fadeIn("slow");
+                int++;
+            } else if(int === 2) {
+                $("#m6").delay(1000).fadeIn("slow");
+                int++;
+            } else if(int === 3) {
+                 $(".seqborder").wiggle({speed:15, wiggles:5, travel: 20});
+                 $("#m7").delay(2000).fadeIn("slow");
+                    
+                 int++;
+            } else if (int === 4) {
+                $("#m8").delay(1000).fadeIn("slow");
+                int++;
+            } else if (int === 5) {
+                $("#m9").delay(1000).fadeIn("slow");
+                int++;
+            } else if (int === 6) {
+                $(".mainseq").fadeOut("slow", function() {
+                    $(".secondseq").delay(1000).fadeIn("slow");
+                });
+                int++;
+            }
+                });
+                
+        $(".secondseq").click(function() {
+            if(int === 7) {
+                $("#m10").delay(1000).fadeIn("slow");
+                int++;
+            } else if(int === 8) {
+                $("#m11").delay(1000).fadeIn("slow");
+                int++;
+            } else if(int === 9) {
+                $("#m12").delay(1000).fadeIn("slow");
+                int++;
+            } else if(int === 10) {
+                $("#m13").delay(1000).fadeIn("slow");
+                int++;
+            } else if(int === 11) {
+                $("#m14").delay(1000).fadeIn("slow");
+                int++;
+            } else if(int === 12) {
+                $("#m15").delay(1000).fadeIn("slow");
+                int++;
+            } else if(int === 13) {
+                $("#m16").delay(1000).fadeIn("slow");
+                int++;
+            } else if(int === 14) {
+                $("#m17").delay(1000).fadeIn("slow");
+                int++;
+            } else if(int === 15) {
+                $("#m18").delay(1000).fadeIn("slow");
+                int++;
+            } else if(int === 16) {
+                $("#m19").delay(1000).fadeIn("slow");
+                int++;
+            } else if(int === 17) {
+                $("#m20").delay(1000).fadeIn("slow");
+                int++;
+            } else if(int === 18) {
+                $("#m21").delay(1000).fadeIn("slow");
+                int++;
+            } else if(int === 19) {
+                $("#m22").delay(1000).fadeIn("slow");
+                int++;
+            }
+            }); 
+        });
+           
+        </script>
+    </head>
+    <body>
+        <div class="fader">
+        <div class="btype">
+        </div>
+        <div class="stype">
+        </div>
+        </div>
+        
+        <div class="beforemain">
+            <div class="flashtext" id="m1">Es regnet.</div>
+            <div class="flashtext" id="m2">Es hat seit Donnerstag.</div>
+            <div class="flashtext" id="m3">Es bleibt nichts als Lesen.</div> 
+        </div>
+        
+        
+        <div class="mainseq">
+            <div class="seqborder">
+                <div class="info" id="i1">Klick auf den Bildschirm, um fortzufahren.</div>
+                <div class="seqtext" id="m4"><p>Ich befinde mich am Tisch mit meinen Büchern, die ich im Licht der Kerze kaum sehen kann. Der Strom ist vor zehn Minuten ausgefallen. Ich weiß nicht, wann er zurückkehren wird. Ich mag es nicht, Dinge nicht zu wissen. Wenn wir Dinge wissen, kann man mehr verstehen.</p></div>
+                <div class="seqtext" id="m5"><p>Draußen gibt’s nichts außer Finsternis, aber manchmal beleuchtet der Blitz das ganze Tal. Wenn ich einen Blitz sehe, fasse ich mich an den Tisch, weil ich weiss, was danach kommt. Eins. Zwei. Drei. Vier. Fünf. Sechs.</p></div>
+                <div class="seqtext" id="m6"><p>Hmm. Vermutlich ist das Gewitter noch weit weg. Ich weiß nicht. Auch wenn es nicht dunkel ist, ist der Nebel so dicht, dass ich weiter als einen Kilometer nicht sehen kann. Ich denke – </p></div>
+                <div class="seqtext" id="m7"><p>Ach. Der Donner kommt endlich. Ich wusste, dass er kommen würde. Die dritte Art.</p></div>
+                <div class="seqtext" id="m8"><p>Ich blättert mein Buch durch und jage für interessante Tatsachen. Alle Informationen, die mir klar gezeigt werden. Es ist wie ein Fenster zur Klarheit. Ich schaue kurz durch das echtes Fenster, und in der Finsternis dahinter, und schaue dann wieder auf mein Buch. Ich bevorzuge es über die Finsternis.</p></div>
+                <div class="seqtext" id="m9"><p>Wissen beruhigt.</p></div>
+            </div>
+        </div>
+        
+        <div class="secondseq">
+            <div class="seqborder">
+                <div class="seqtext" id="m10"><p>Der Mond ist plötzlich sichtbar durch den Nebel und das Gewölk.</p></div>
+                <div class="seqtext" id="m11"><p>Die nasse Gipfel, die um das Tal liegen, glänzen im Mondlicht. Ich kann die Felsen in der Höhe kaum sehen, aber ich weiß, dass sie da sitzt.</p></div>
+                <div class="seqtext" id="m12"><p>Die Hängen sind schroff - der ganze Berg könnte wegen des Regen ins Rutsch kommen. Wasser ist schwer.</p></div>
+                <div class="seqtext" id="m13"><p><img src="dichte.png" style="height:38vh; width:51vw"></p></div>
+                <div class="seqtext" id="m14"><p>Ein tausende Kilogramme pro Kubikmeter. Es kommt von dem Himmel in Form von Schnee oder Regen. Es sperrt die Straßen (gibt's noch keine Hupe aus dem Tal). Es wascht die Gesteine aus (nun hab ich Geröll im Salat)...</p></div>
+                 <div class="seqtext" id="m15"><p>Und es macht Rutsche. Es ist in 1851 passiert.</p></div>
+                 <div class="seqtext" id="m16"><p>...</p></div>
+                 <div class="seqtext" id="m17"><p>Ich muss davor fliehen.</p></div>
+                 <div class="seqtext" id="m18"><p><img src="karte.png" style="height:62vh; width:70vw"></p></div>
+                 <div class="seqtext" id="m19"><p>In Richtung Italien zu gehen ist Wahnsinn.</p></div>
+                 <div class="seqtext" id="m20"><p>Aber ich muss nicht hierbleiben...</p></div>
+                 <div class="seqtext" id="m21"><p>...</p></div>
+                 <div class="seqtext" id="m22"><p>Aber der Regen fängt mich ein.</p></div>
+            </div>
+        </div>
+            
+       
+
+    </body>
+</html>
